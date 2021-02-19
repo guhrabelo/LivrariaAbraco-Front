@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-home',
@@ -12,4 +13,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
 }
+
+
+
+
