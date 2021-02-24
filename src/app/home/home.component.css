@@ -1,0 +1,53 @@
+.navbar{
+    background-color: #005186;
+}
+
+.navbar-brand{
+    color:white
+}
+
+.nav-link:hover{
+    color: #65ACD8;
+}
+
+.nav-link{
+    color:white;
+}
+.navbar-brand{
+    font-size: 15pt;
+    font-family: Freestyle Script;
+}
+
+.jumbotron{
+    display: flex;
+
+
+}
+
+
+.btnVermais{
+    background-color: white;
+    color: black;
+    border: 2px solid #fdfdfd;
+    font-size: 25px;
+    border-radius: 40px;
+}
+
+.btnVermais:hover{
+    background-color: #005186;
+    color: white;
+}
+
+.hrPontilhado{
+    border:  2px dashed #C1DFF2;
+    width: 1200px;
+}
+
+.h2OqueFazemos{
+    color: #65ACD8;
+    font-family: Century Gothic;
+}
+
+.containerOqueFazermos{
+
+}
