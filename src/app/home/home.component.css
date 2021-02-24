@@ -20,6 +20,10 @@
     font-family: Freestyle Script;
 }
 
+.color{
+    color: black
+}
+
 .jumbotron{
     background-image: url(https://i.imgur.com/QcRDPA3.png);
     background-repeat: round;
@@ -30,6 +34,13 @@
 
 .imagemMenininha{
     background-image: url(https://i.imgur.com/1dpImAQ.png);
+    background-position: 95%;
+    background-repeat: no-repeat;
+    background-size: 18%;
+}
+
+.imagemMenininha:hover{
+    background-image: url(https://i.imgur.com/noDm370.png);
     background-position: 95%;
     background-repeat: no-repeat;
     background-size: 18%;
@@ -75,6 +86,7 @@
 
 .oQueFazemos{
     color: #005186;
+    font-family: Century Gothic;
 }
 
 .texto-esquerda{
@@ -88,4 +100,16 @@
 
 .texto-direita{
     text-align: justify;
+}
+
+.imagemParceiros{
+    background-image: url(https://i.imgur.com/cFyuOd5.jpg);
+    background-position: 90%;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+
+.social{
+    width: 50px;
+    height: 50px;
 }
