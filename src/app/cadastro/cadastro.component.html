@@ -39,7 +39,7 @@
 <div class="container-fluid">
 
     <div class="row mt-5">
-        <div class="col-md-6" id='img-bg'></div>
+        <div class="col-md-6 mt-5" id='img-bg'></div>
         <div class="col-md-6 mt-5 mb-5">
             <div class="row d-flex justify-content-center">
                 <div class="col-md-10 corDefundo">
@@ -48,33 +48,29 @@
 
                     <div class="form-group">
                         <label for="nome">Nome</label>
-                        <input  class="form-control" type="text" name="nome" id="nome" placeholder="Seu nome" >
+                        <input [(ngModel)]='usuario.nome' class="form-control" type="text" name="nome" id="nome"
+                            placeholder="Seu nome">
                     </div>
-
-                    <div class="form-group">
-                        <label for="usuario">Usuário</label>
-                        <input  class="form-control" type="text" name="usuario" id="usuario" placeholder="Seu usuário">
-                    </div>
-
                     <div class="form-group">
                         <label for="email">E-mail</label>
-                        <input  class="form-control" type="text" name="email" id="email" placeholder="example@email.com">
+                        <input [(ngModel)]='usuario.email' class="form-control" type="text" name="email" id="email"
+                            placeholder="example@email.com">
                     </div>
 
                     <div class="form-group">
                         <label for="senha">Senha</label>
-                        <input  class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha">
+                        <input (input)='confirmarSenha($event)' class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha">
                     </div>
 
                     <div class="form-group">
                         <label for="confirmSenha">Confirmar Senha</label>
-                        <input  class="form-control" type="password" name="confirmSenha" id="confirmSenha"
-                            placeholder="Confirme sua senha">
+                        <input [(ngModel)]='usuario.senha' class="form-control" type="password" name="confirmSenha"
+                            id="confirmSenha" placeholder="Confirme sua senha">
                     </div>
 
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="botaoEntrar mr-4" routerLink='/entrar'>Cancelar</button>
-                        <button type="submit" class="botaoCadastrar" >Cadastrar</button>
+                        <button type="submit" class="botaoEntrar mr-4" routerLink='/home'>Cancelar</button>
+                        <button type="submit" class="botaoCadastrar" (click)='cadastrar()' >Cadastrar</button>
                     </div>
 
                 </div>
