@@ -1,16 +1,11 @@
-  
-.cardgs * {
-  margin: auto;
-  padding: 0;
-  font-family: 'Quicksand', sans-serif;
-}
-
 p{
   font-size: 18px;
 }
 
 .navbar{
   background-color: #005186;
+  font-family: SansSerif;
+  font-size: 13pt;
 }
 
 .navbar-brand{
@@ -127,12 +122,6 @@ h1{
   display: flex;
 }
 
-.getset {
-  margin: 10px 10px 20px 10px;
-}
-
-
-
 h3{
   font-size: 24px;
   color: #333;
@@ -156,12 +145,8 @@ h3{
 {
   color: #65ACD8;
 }
-
-
-
-
-
-
+.card
+{
+ border-color: rgb(192, 192, 192);
  
-
-
+}

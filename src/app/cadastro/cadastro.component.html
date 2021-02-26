@@ -12,19 +12,19 @@
                 <a class="nav-link" href="#">HOME <span class="sr-only">(página atual)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">LOJA</a>
+                <a class="nav-link" routerLink='/loja'>LOJA</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink='/sobre-nos'>SOBRE NÓS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">CONTATOS</a>
+                <a class="nav-link" routerLink='/contatos'>CONTATOS</a>
             </li>
 
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">LOGIN</a>
+                <a class="nav-link" routerLink='/login'>LOGIN</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" routerLink='/cadastro'>CADASTRO</a>
@@ -36,45 +36,47 @@
 </nav>
 <!--/Navbar-->
 
-<div class="container-fluid">
+<!--Tela de Cadastro-->
+<br>
+<br>
 
-    <div class="row mt-5">
-        <div class="col-md-6 mt-5" id='img-bg'></div>
-        <div class="col-md-6 mt-5 mb-5">
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-10 corDefundo">
+<main>
+    <article class="main-container">
+      <div class="login-wrapper">
 
-                    <h1 class="text-center">Cadastro</h1>
+        <section class="image-wrapper"> 
+        </section>
 
-                    <div class="form-group">
-                        <label for="nome">Nome</label>
-                        <input [(ngModel)]='usuario.nome' class="form-control" type="text" name="nome" id="nome"
-                            placeholder="Seu nome">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input [(ngModel)]='usuario.email' class="form-control" type="text" name="email" id="email"
-                            placeholder="example@email.com">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="senha">Senha</label>
-                        <input (input)='confirmarSenha($event)' class="form-control" type="password" name="senha" id="senha" placeholder="Sua senha">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="confirmSenha">Confirmar Senha</label>
-                        <input [(ngModel)]='usuario.senha' class="form-control" type="password" name="confirmSenha"
-                            id="confirmSenha" placeholder="Confirme sua senha">
-                    </div>
-
-                    <div class="d-flex justify-content-center">
-                        <button type="submit" class="botaoEntrar mr-4" routerLink='/home'>Cancelar</button>
-                        <button type="submit" class="botaoCadastrar" (click)='cadastrar()' >Cadastrar</button>
-                    </div>
-
-                </div>
+        <section class="form-wrapper">
+          <div class="form-container align-items-center">
+           
+            <div class="form-messages">
+                <br>
+                <br>        
+              <h1 id="alinhador">Cadastro</h1>
             </div>
+           
+             <form  action="fakeurl.php" class="form ">
+              <input [(ngModel)]='usuario.nome' type="user" name="user" id="user-email" placeholder="Nome" >
+           
+              <input [(ngModel)]='usuario.email' type="email" name="user-email" id="user-email" placeholder="E-mail" >
+              
+              <input (input)='confirmarSenha($event)' type="password" name="user-password" id="user-password" placeholder="Senha" > 
+
+              <input [(ngModel)]='usuario.senha' type="password" name="user-password" id="user-password" placeholder="Confirmar Senha"  >
+              <div id="afastaBotao" class="row d-flex justify-content-center">
+                   
+                <a href="#" class="login-button1" (click)='cadastrar()'>Cadastrar</a>  
+              <a href="#" class="login-button mr-6" routerLink='/home'>Cancelar</a>
+              
+              </div>
+             
+            </form>
+            
+          </div>
+        </section>
         </div>
-    </div>
-</div>
+    </article>
+  </main>
+
+  <!--Tela de Cadastro-->
