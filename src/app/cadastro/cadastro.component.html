@@ -42,41 +42,54 @@
 
 <main>
     <article class="main-container">
-      <div class="login-wrapper">
+        <div class="login-wrapper">
 
-        <section class="image-wrapper"> 
-        </section>
+            <section class="image-wrapper">
+            </section>
 
-        <section class="form-wrapper">
-          <div class="form-container align-items-center">
-           
-            <div class="form-messages">
-                <br>
-                <br>        
-              <h1 id="alinhador">Cadastro</h1>
-            </div>
-           
-             <form  action="fakeurl.php" class="form ">
-              <input [(ngModel)]='usuario.nome' type="user" name="user" id="user-email" placeholder="Nome" >
-           
-              <input [(ngModel)]='usuario.email' type="email" name="user-email" id="user-email" placeholder="E-mail" >
-              
-              <input (input)='confirmarSenha($event)' type="password" name="user-password" id="user-password" placeholder="Senha" > 
+            <section class="form-wrapper">
+                <div class="form-container align-items-center">
 
-              <input [(ngModel)]='usuario.senha' type="password" name="user-password" id="user-password" placeholder="Confirmar Senha"  >
-              <div id="afastaBotao" class="row d-flex justify-content-center">
-                   
-                <a href="#" class="login-button1" (click)='cadastrar()'>Cadastrar</a>  
-              <a href="#" class="login-button mr-6" routerLink='/home'>Cancelar</a>
-              
-              </div>
-             
-            </form>
-            
-          </div>
-        </section>
+                    <div class="form-messages">
+                        <br>
+                        <br>
+                        <h1 id="alinhador">Cadastro</h1>
+                    </div>
+
+                    <form action="fakeurl.php" class="form">
+                        <input [(ngModel)]='usuario.nome' type="user" name="user" id="user-email" placeholder="Nome">
+
+                        <input [(ngModel)]='usuario.email' type="email" name="user-email" id="user-email"
+                            placeholder="E-mail">
+
+                        <input (input)='confirmarSenha($event)' type="password" name="user-password" id="user-password"
+                            placeholder="Senha">
+
+                        <input [(ngModel)]='usuario.senha' type="password" name="user-password" id="user-password"
+                            placeholder="Confirmar Senha">
+                        
+                        <label for="tipo">Tipo de Usuário</label>
+                        <select class="form" name="tipo" id="tipo" (change)='tipoUsuario($event)'>
+                            <option value="">Selecione o tipo de usuário</option>
+                            <option value="normal">Normal</option>
+                            <option value="adm">Administrador</option>
+                        </select>
+                        
+                        <div id="afastaBotao" class="row d-flex justify-content-center">
+                          <!--  <a href="#" class="login-button mr-3" routerLink='/home'>Cancelar</a>
+                            <a href="#" class="login-button1 mr-6" (click)='cadastrar()'>Cadastrar</a>-->
+                            
+
+                            <button type="submit" class="login-button mr-3" routerLink='/home'>Cancelar</button>
+                            <button type="submit" class="login-button1 mr-6" (click)='cadastrar()'>Cadastrar</button>
+
+                        </div>
+                    </form>
+
+                </div>
+            </section>
         </div>
     </article>
-  </main>
+</main>
 
-  <!--Tela de Cadastro-->
+<!--Tela de Cadastro-->

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 import { UserLogin } from '../model/UserLogin';
 import { Usuario } from '../model/Usuario';
 
@@ -10,16 +11,24 @@ import { Usuario } from '../model/Usuario';
 export class AuthService {
 
   constructor(
-    private htttp: HttpClient
+    private http: HttpClient
   ) { }
 
   logar(userLogin: UserLogin):Observable<UserLogin>{
-    return this.htttp.post<UserLogin>('http://localhost:8080/usuario/logar', userLogin)
+    return this.http.post<UserLogin>('http://localhost:8080/usuario/logar', userLogin)
 
   }
 
   cadastrar(usuario: Usuario):Observable<Usuario>{
-    return this.htttp.post<Usuario>('http://localhost:8080/usuario/cadastrar', usuario)
+    return this.http.post<Usuario>('http://localhost:8080/usuario/cadastrar', usuario)
+  }
+
+  logado(){
+    let ok: boolean = false
+    
+    
+
+    return ok
   }
 
 }

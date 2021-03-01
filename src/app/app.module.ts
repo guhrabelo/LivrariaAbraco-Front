@@ -11,6 +11,7 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
 import { ContatoComponent } from './contato/contato.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ContatoComponent } from './contato/contato.component';
     SobreNosComponent,
     CadastroComponent,
     LoginComponent,
-    ContatoComponent
+    ContatoComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

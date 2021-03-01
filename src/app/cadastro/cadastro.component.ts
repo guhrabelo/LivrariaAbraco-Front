@@ -10,11 +10,12 @@ import { AuthService } from '../service/auth.service';
 })
 export class CadastroComponent implements OnInit {
 
-  usuario: Usuario = new Usuario
+  usuario: Usuario = new Usuario()
   confirmSenha: string
+  tipoUser : string
 
   constructor(
-    private AuthService: AuthService,
+    private authService: AuthService,
     private router: Router
   ) { }
 
@@ -26,16 +27,21 @@ export class CadastroComponent implements OnInit {
     this.confirmSenha = event.target.value
   }
 
+  tipoUsuario(event: any){
+    this.tipoUser = event.target.value
+  }
+
   cadastrar(){
+    this.usuario.tipo = this.tipoUser
     if(this.usuario.senha != this.confirmSenha){
       alert('Senhas Incorretas!')
     }else{
-      this.AuthService.cadastrar(this.usuario).subscribe((resp: Usuario)=>{
+      this.authService.cadastrar(this.usuario).subscribe((resp: Usuario)=>{
         this.usuario = resp
-        this.router.navigate(['/login'])
+        this.router.navigate(['/home'])
         alert('Usuário cadastrado com sucesso!')
       })
     }
   }
-
+  
 }

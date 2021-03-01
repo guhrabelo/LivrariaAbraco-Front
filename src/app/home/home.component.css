@@ -54,6 +54,11 @@
     background-size: 340px;
 }
 
+
+.button-Carousel-Cards{
+    /*BOTÃO DO CARROSSEL*/
+}
+
 .btnVermais{
     background-color: white;
     color: black;
@@ -112,4 +117,8 @@
 .social{
     width: 50px;
     height: 50px;
+}
+
+.tamanhoCard{
+    width: 250px;
 }
