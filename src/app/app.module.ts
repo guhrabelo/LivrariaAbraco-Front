@@ -12,6 +12,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { LoginComponent } from './login/login.component';
 import { ContatoComponent } from './contato/contato.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RodapeComponent } from './rodape/rodape.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     CadastroComponent,
     LoginComponent,
     ContatoComponent,
-    NavbarComponent
+    NavbarComponent,
+    RodapeComponent
   ],
   imports: [
     BrowserModule,

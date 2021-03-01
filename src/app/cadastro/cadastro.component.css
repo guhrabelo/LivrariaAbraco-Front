@@ -77,7 +77,7 @@
 }
   
   .main-container {
-    min-height: 100vh;
+    min-height: 75vh;
     background-color: #ffffff;
     
     display: flex;
@@ -116,7 +116,7 @@
     flex-direction: row;
     justify-content: space-between;
     
-    padding: 15px;
+    padding: 10px;
     margin-top: 15px;
   
     font-weight: 900;
