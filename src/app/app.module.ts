@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { ContatoComponent } from './contato/contato.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RodapeComponent } from './rodape/rodape.component';
+import { CategoriaComponent } from './categoria/categoria.component';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { RodapeComponent } from './rodape/rodape.component';
     LoginComponent,
     ContatoComponent,
     NavbarComponent,
-    RodapeComponent
+    RodapeComponent,
+
+    CategoriaComponent
   ],
   imports: [
     BrowserModule,
