@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
+
 
 @Component({
   selector: 'app-admnavbar',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdmnavbarComponent implements OnInit {
 
-  constructor() { }
+  nome = environment.nome
 
-  ngOnInit(): void {
+  constructor(
+    private router: Router
+  ) { }
+
+  ngOnInit(){
+  }
+
+  sair(){
+    this.router.navigate(['/home'])
+    environment.tipo = ''
+    environment.id = 0
+    environment.nome = ''
+    environment.token = ''
   }
 
 }

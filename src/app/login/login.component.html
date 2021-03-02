@@ -21,9 +21,9 @@
             <br>
             <br>
              <form  action="fakeurl.php" class="form ">
-              <input type="email" name="user-email" id="user-email" placeholder="E-mail">
-              <input type="password" name="user-password" id="user-password" placeholder="Senha">
-              <a href="#" class="login-button">Entrar</a>
+              <input [(ngModel)]='userLogin.email' type="email" name="user-email" id="user-email" placeholder="E-mail">
+              <input [(ngModel)]='userLogin.senha' type="password" name="user-password" id="user-password" placeholder="Senha">
+              <button type="submit" class="login-button" (click)='entrar()'>Entrar</button>
             </form>
             <p> Não tem uma conta? <a routerLink='/cadastro'>Cadastre-se</a></p>
           </div>

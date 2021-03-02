@@ -23,12 +23,18 @@ export class AuthService {
     return this.http.post<Usuario>('http://localhost:8080/usuario/cadastrar', usuario)
   }
 
-  logado(){
-    let ok: boolean = false
+  tipoDeUsuarioLogado(){
+    let usuarioTipo: string
     
-    
+    if(environment.tipo == 'adm'){
+      usuarioTipo = 'adm'
+    }else if(environment.tipo == 'normal'){
+      usuarioTipo = 'normal'
+    }else{
+      usuarioTipo = ''
+    }
 
-    return ok
+    return usuarioTipo
   }
 
 }

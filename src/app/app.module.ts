@@ -16,6 +16,7 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { AdmnavbarComponent } from './admnavbar/admnavbar.component';
 import { UsernavbarComponent } from './usernavbar/usernavbar.component';
+import { ProdutoComponent } from './produto/produto.component';
 
 
 @NgModule({
@@ -34,7 +35,9 @@ import { UsernavbarComponent } from './usernavbar/usernavbar.component';
 
     AdmnavbarComponent,
 
-    UsernavbarComponent
+    UsernavbarComponent,
+
+    ProdutoComponent
   ],
   imports: [
     BrowserModule,
