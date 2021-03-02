@@ -14,6 +14,8 @@ import { ContatoComponent } from './contato/contato.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { CategoriaComponent } from './categoria/categoria.component';
+import { AdmnavbarComponent } from './admnavbar/admnavbar.component';
+import { UsernavbarComponent } from './usernavbar/usernavbar.component';
 
 
 @NgModule({
@@ -28,7 +30,11 @@ import { CategoriaComponent } from './categoria/categoria.component';
     NavbarComponent,
     RodapeComponent,
 
-    CategoriaComponent
+    CategoriaComponent,
+
+    AdmnavbarComponent,
+
+    UsernavbarComponent
   ],
   imports: [
     BrowserModule,
