@@ -43,29 +43,25 @@
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Primeiro</th>
-                    <th scope="col">Último</th>
-                    <th scope="col">Nickname</th>
+                    <th scope="col">Gênero</th>
+                    <th scope="col">Assunto</th>
+                    <th scope="col">Nacionalidade</th>
+                    <th scope="col" class="text-right">Modificações</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                  <tr *ngFor='let item of listaCategoria'>
+                    <th>{{item.id}}</th>
+                    <td>{{item.genero}}</td>
+                    <td>{{item.assunto}}</td>
+                    <td>{{item.nacionalidade}}</td>
+                    <td class="d-flex justify-content-end">
+                        <button class="btn btn-info mr-3" [routerLink]="['/categoria-edit',item.id]">Editar</button>
+                        <button class="btn btn-danger" [routerLink]="['/categoria-delete',item.id]">Apagar</button>
+                    </td>
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
+                  
+                  
                 </tbody>
               </table>
 

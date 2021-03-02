@@ -20,23 +20,27 @@ export class CategoriaComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if(environment.token == ''){
-      this.router.navigate(['/entrar'])
+    if(environment.tipo == ''){
+      this.router.navigate(['/home'])
     }
 
+    this.findAllCategoria()
+  }
+
+  findAllCategoria(){
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[])=>{
+      this.listaCategoria = resp
+    })
   }
 
   cadastrar(){
     this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria)=>{
       this.categoria = resp
       alert('Categoria cadastrada com sucesso')
+      this.findAllCategoria()
       this.categoria = new Categoria()
     })
   }
 
-
-  public genero: string
-  public assunto: string
-  public nacionalidade: string
 
 }

@@ -17,6 +17,8 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { AdmnavbarComponent } from './admnavbar/admnavbar.component';
 import { UsernavbarComponent } from './usernavbar/usernavbar.component';
 import { ProdutoComponent } from './produto/produto.component';
+import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 
 
 @NgModule({
@@ -37,7 +39,11 @@ import { ProdutoComponent } from './produto/produto.component';
 
     UsernavbarComponent,
 
-    ProdutoComponent
+    ProdutoComponent,
+
+    CategoriaEditComponent,
+
+    CategoriaDeleteComponent
   ],
   imports: [
     BrowserModule,
