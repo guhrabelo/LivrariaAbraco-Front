@@ -63,13 +63,11 @@
   text-align: center;
 }
   
-/* Imagem*/
 .main-container .image-wrapper {
   background: url("https://i.imgur.com/siGwTCX.jpg");
   width: 100%;
   background-position: center;
   background-size: cover;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -77,5 +75,7 @@
  
 .cadastro
 {
-   margin: 30px 0px 15px 140px;
+  text-align: center;
+   margin-top: 30px;
+   margin-bottom: 20px;
 }
