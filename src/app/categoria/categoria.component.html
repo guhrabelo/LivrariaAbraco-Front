@@ -14,8 +14,7 @@
                             placeholder="Digite o genero da categoria">
                         <input [(ngModel)]='categoria.assunto' type="text" class="form-control mb-2" id="assunto"
                             placeholder="Digite o assunto da categoria">
-                        <input [(ngModel)]='categoria.nacionalidade' type="text" class="form-control mb-2" id="nacionalidade"
-                            placeholder="Digite a nacionalidade da categoria">
+                        
                     </div>
 
                     <div class="d-flex justify-content-center">
@@ -45,7 +44,6 @@
                     <th scope="col">#</th>
                     <th scope="col">Gênero</th>
                     <th scope="col">Assunto</th>
-                    <th scope="col">Nacionalidade</th>
                     <th scope="col" class="text-right">Modificações</th>
                   </tr>
                 </thead>
@@ -54,7 +52,6 @@
                     <th>{{item.id}}</th>
                     <td>{{item.genero}}</td>
                     <td>{{item.assunto}}</td>
-                    <td>{{item.nacionalidade}}</td>
                     <td class="d-flex justify-content-end">
                         <button class="btn btn-info mr-3" [routerLink]="['/categoria-edit',item.id]">Editar</button>
                         <button class="btn btn-danger" [routerLink]="['/categoria-delete',item.id]">Apagar</button>

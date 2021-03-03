@@ -1,36 +1,38 @@
-.color{
-    color: black
-}
-
 .jumbotron{
-    background-image: url(https://i.imgur.com/QcRDPA3.png);
+    background-image: url(https://i.imgur.com/ZwgKZxd.png);
     background-repeat: round;
     padding-top: 25px;
     padding-bottom: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 25px;       
 }
 
-.imagemMenininha{
-    background-image: url(https://i.imgur.com/1dpImAQ.png);
-    background-position: 95%;
-    background-repeat: no-repeat;
-    background-size: 18%;
+.jumbotronText {
+    position: absolute;
+    color: #3D3D3D;
+    text-align: justify;
+    top: 10%;
+    left: 20%;
 }
 
-.imagemMenininha:hover{
-    background-image: url(https://i.imgur.com/noDm370.png);
-    background-position: 95%;
-    background-repeat: no-repeat;
-    background-size: 18%;
+.jumbotronText h2{
+    font-size: 3.5vw;   
 }
 
-.jumbotron-imagem:hover{
-    
-    background-image: url(https://i.imgur.com/noDm370.png);
-    background-position: 90%;
-    background-repeat: no-repeat;
-    background-size: 340px;
+.jumbotronText h2:hover{
+    color: #f2b035;
+        
 }
+
+.jumbotronText h3 {
+    font-size: 1.5vw;
+}
+
+.jumbotron:hover {
+    color: #f2b035;
+    background-image: url(https://i.imgur.com/kdzMWnv.png);    
+}
+
+
 
 
 .button-Carousel-Cards{
@@ -39,17 +41,18 @@
 
 .botaoCardsPrev{
     background-color: red;
-    width: 50px;
-    height: 50px;
+    width: 5vh;
+    height: 5vh;
     top: 50%;
     position: absolute;
 }
 
 .botaoCardsNext{
     background-color: red;
-    width: 50px;
-    height: 50px;
+    width: 5vh;
+    height: 5vh;
     top: 50%;
+    position: absolute;
 }
 
 .btnVermais{
@@ -67,7 +70,7 @@
 
 .hrPontilhado{
     border:  2px dashed #C1DFF2;
-    width: 1000px;
+    width: 70%;
 }
 
 .hrMenor{
