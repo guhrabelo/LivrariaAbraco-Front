@@ -3,18 +3,14 @@
     <div class="row mt-5 d-flex justify-content-center">
         <article class="main-container">
             <div class="login-wrapper">
-    
+
                 <section class="image-wrapper">
-                </section>
-    
+                </section>   
                 <section class="form-wrapper">
                     <div class="form-container align-items-center">
                         <div class="form-messages">
-                            <br>
-                            <br>
-                            <h1 id="alinhador">Cadastro</h1>
-                        </div>
-    
+                            <h1 style="margin: 30px 0px 15px 140px">Cadastro</h1>
+                        </div>  
                         <form action="fakeurl.php" class="form">
                             <input [(ngModel)]='usuario.nome' type="user" name="user" id="user-email" placeholder="Nome">
     
@@ -35,8 +31,8 @@
                             </select>
                             
                             <div id="afastaBotao" class="row d-flex justify-content-center">
-                                <button type="submit" class="login-button mr-3" routerLink='/home'>Cancelar</button>
-                                <button type="submit" class="login-button1 mr-6" (click)='cadastrar()'>Cadastrar</button>
+                                <button type="submit" class="cadastrar-button mr-3 mb-4 mt-1" (click)='cadastrar()'>Cadastrar</button>
+                                <button type="submit" class="cancelar-button mr-6 mb-4 mt-1" routerLink='/home'>Cancelar</button>
                             </div>
                         </form>
                     </div>
@@ -45,5 +41,4 @@
         </article>
     </div>
 </div>
-
 <!--Tela de Cadastro-->
