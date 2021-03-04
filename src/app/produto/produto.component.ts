@@ -62,6 +62,7 @@ export class ProdutoComponent implements OnInit {
       this.produto = resp
       alert('Produto cadastrado com sucesso!')
       this.produto = new Produto()
+      this.getAllProdutos()
     }, erro =>{
       if(erro.status == 500){
         alert('Preencha os campos corretamente!')
