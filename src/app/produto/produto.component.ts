@@ -60,6 +60,7 @@ export class ProdutoComponent implements OnInit {
   
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
+      this.produto.preco = Number(this.produto.preco.toFixed(2)) 
       alert('Produto cadastrado com sucesso!')
       this.produto = new Produto()
       this.getAllProdutos()
@@ -69,4 +70,5 @@ export class ProdutoComponent implements OnInit {
       }
     }) 
   }
+
 }

@@ -14,9 +14,9 @@
                             placeholder="Digite o titulo do livro">
                         <input [(ngModel)]='produto.autor' type="text" class="form-control mb-2" id="autor"
                         placeholder="Digite o nome do autor">   
-                        <input [(ngModel)]='produto.preco' type="number" class="form-control mb-2" id="preco"
+                        <input min="0" [(ngModel)]='produto.preco' type="number" class="form-control mb-2" id="preco"
                             placeholder="Digite o preço do livro">
-                        <input [(ngModel)]='produto.quantidade' type="number" class="form-control mb-2" id="quantidade"
+                        <input min="0" [(ngModel)]='produto.quantidade' type="number" class="form-control mb-2" id="quantidade"
                             placeholder="Digite a quantidade de livros adicionados">
                         <input [(ngModel)]='produto.imagem' type="text" class="form-control mb-2" id="imagem"
                             placeholder="Imagem da capa do livro (link)">
