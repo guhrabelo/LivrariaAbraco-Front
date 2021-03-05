@@ -32,7 +32,7 @@ const routes: Routes = [
   {path: 'categoria-delete/:id', component: CategoriaDeleteComponent},
   {path: 'produto-edit/:id', component: ProdutoEditComponent},
   {path: 'produto-delete/:id', component: ProdutoDeleteComponent},
-  {path: 'compra', component: CompraComponent}
+  {path: 'compra', component: CompraComponent},
 
 ];
 
