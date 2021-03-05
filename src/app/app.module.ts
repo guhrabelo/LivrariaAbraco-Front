@@ -21,6 +21,7 @@ import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.com
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
+import { CompraComponent } from './compra/compra.component';
 
 
 @NgModule({
@@ -49,7 +50,9 @@ import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.c
 
     ProdutoEditComponent,
 
-    ProdutoDeleteComponent
+    ProdutoDeleteComponent,
+
+    CompraComponent
   ],
   imports: [
     BrowserModule,

@@ -26,6 +26,7 @@ export class ProdutoComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
     if(environment.tipo == ''){
       this.router.navigate(['/home'])
       environment.tipo = ''
@@ -60,7 +61,7 @@ export class ProdutoComponent implements OnInit {
   
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
-      this.produto.preco = Number(this.produto.preco.toFixed(2)) 
+      this.produto.preco = Number(this.produto.preco.toFixed(2).replace(".",",")) 
       alert('Produto cadastrado com sucesso!')
       this.produto = new Produto()
       this.getAllProdutos()

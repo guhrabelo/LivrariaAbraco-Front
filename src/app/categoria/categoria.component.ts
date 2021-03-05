@@ -20,6 +20,7 @@ export class CategoriaComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
     if(environment.tipo == ''){
       this.router.navigate(['/home'])
     }

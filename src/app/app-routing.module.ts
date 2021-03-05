@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CategoriaComponent } from './categoria/categoria.component';
+import { CompraComponent } from './compra/compra.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path: 'categoria-edit/:id', component: CategoriaEditComponent},
   {path: 'categoria-delete/:id', component: CategoriaDeleteComponent},
   {path: 'produto-edit/:id', component: ProdutoEditComponent},
-  {path: 'produto-delete/:id', component: ProdutoDeleteComponent}
+  {path: 'produto-delete/:id', component: ProdutoDeleteComponent},
+  {path: 'compra', component: CompraComponent}
 
 ];
 

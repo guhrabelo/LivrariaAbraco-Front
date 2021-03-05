@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid mt-5">
     <div class="row">
         <div class="col-md-12">
 
@@ -13,18 +13,20 @@
                         <input [(ngModel)]='produto.nome' type="text" class="form-control mb-2" id="nome"
                             placeholder="Digite o titulo do livro">
                         <input [(ngModel)]='produto.autor' type="text" class="form-control mb-2" id="autor"
-                        placeholder="Digite o nome do autor">   
+                            placeholder="Digite o nome do autor">
                         <input min="0" [(ngModel)]='produto.preco' type="number" class="form-control mb-2" id="preco"
                             placeholder="Digite o preço do livro">
-                        <input min="0" [(ngModel)]='produto.quantidade' type="number" class="form-control mb-2" id="quantidade"
-                            placeholder="Digite a quantidade de livros adicionados">
+                        <input min="0" [(ngModel)]='produto.quantidade' type="number" class="form-control mb-2"
+                            id="quantidade" placeholder="Digite a quantidade de livros adicionados">
                         <input [(ngModel)]='produto.imagem' type="text" class="form-control mb-2" id="imagem"
                             placeholder="Imagem da capa do livro (link)">
-                            <select class="form-control mb-2" name="categoria" id="dropCategorias" [(ngModel)] = 'idCategoria' (change) = 'findByIdCategoria()'>
-                                <option *ngFor='let item of listaCategorias' value="{{item.id}}">
-                                    {{item.assunto}}                         
-                                </option>
-                            </select>
+                        <select name="select-simples-placeholder" class="form-control mb-2" name="categoria"
+                            id="dropCategorias" placeholder="Selecione o Assunto" [(ngModel)]='idCategoria'
+                            (change)='findByIdCategoria()'>
+                            <option *ngFor='let item of listaCategorias' value="{{item.id}}">
+                                {{item.assunto}}
+                            </option>
+                        </select>
                     </div>
 
                     <div class="d-flex justify-content-center">
@@ -39,7 +41,7 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container ">
     <div class="row mt-5">
         <div class="col-md-12">
             <h2 class="text-center">Todas os Produtos</h2>
@@ -47,39 +49,39 @@
     </div>
 
     <div class="row mt-3 d-flex justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <!--Tabela-->
             <table class="table table-hover">
                 <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Título</th>
-                    <th scope="col">Autor</th>
-                    <th scope="col">Preço</th>
-                    <th scope="col">Quantidade</th>
-                    <th scope="col">Genêro</th>
-                    <th scope="col">Assunto</th>
-                    <th scope="col" class="text-right">Modificações</th>
-                  </tr>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col">Preço</th>
+                        <th scope="col">Quantidade</th>
+                        <th scope="col">Genêro</th>
+                        <th scope="col">Assunto</th>
+                        <th scope="col" class="text-right">Modificações</th>
+                    </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor='let item of listaProdutos'>
-                    <th>{{item.id}}</th>
-                    <td>{{item.nome}}</td>
-                    <td>{{item.autor}}</td>
-                    <td>{{item.preco}}</td>
-                    <td>{{item.quantidade}}</td>
-                    <td>{{item.categoria.genero}}</td>
-                    <td>{{item.categoria.assunto}}</td>
-                    <td class="d-flex justify-content-end">
-                        <button class="btn btn-info mr-3" [routerLink]="['/produto-edit',item.id]">Editar</button>
-                        <button class="btn btn-danger" [routerLink]="['/produto-delete',item.id]">Apagar</button>
-                    </td>
-                  </tr>
-                  
-                  
+                    <tr *ngFor='let item of listaProdutos'>
+                        <th>{{item.id}}</th>
+                        <td>{{item.nome}}</td>
+                        <td>{{item.autor}}</td>
+                        <td>{{item.preco}}</td>
+                        <td>{{item.quantidade}}</td>
+                        <td>{{item.categoria.genero}}</td>
+                        <td>{{item.categoria.assunto}}</td>
+                        <td class="d-flex justify-content-end">
+                            <button class="btn btn-info mr-3" [routerLink]="['/produto-edit',item.id]">Editar</button>
+                            <button class="btn btn-danger" [routerLink]="['/produto-delete',item.id]">Apagar</button>
+                        </td>
+                    </tr>
+
+
                 </tbody>
-              </table>
+            </table>
 
 
             <!--/Tabela-->

@@ -1,5 +1,5 @@
 <!--Body-->
-<div class="container-fluid">
+<div class="container-fluid mt-5">
 
     <body>
         <!--Jumbotron-->
@@ -22,13 +22,8 @@
         <div class="row d-flex justify-content-center">
             <div class="col-2 ml-2 mt-5">
                 <h3 class="mb-1" style="color: #005186">Categorias</h3>
-                <ul class="list-group list-group-flush">
-                    <a href="#" class="list-group-item list-group-item-action">Artes</a>
-                    <a href="#" class="list-group-item list-group-item-action">Biologia</a>
-                    <a href="#" class="list-group-item list-group-item-action">História</a>
-                    <a href="#" class="list-group-item list-group-item-action">Humanas</a>
-                    <a href="#" class="list-group-item list-group-item-action">Literatura</a>
-                    <a href="#" class="list-group-item list-group-item-action">Matemática</a>
+                <ul class="list-group list-group-flush" *ngFor='let itemCategoria of listaCategoria'>
+                    <a href="#" class="list-group-item list-group-item-action">{{itemCategoria.genero}}</a>
                 </ul>
             </div>
 
