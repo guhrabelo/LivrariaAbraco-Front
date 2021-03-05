@@ -1,3 +1,8 @@
+/* *{
+  padding: 0px;
+  margin: 0px;
+} */
+
 p{
   font-size: 18px;
 }
@@ -5,8 +10,27 @@ p{
 .jumbotron{
   display: flex;
 
-
 }
+
+.sloganImg {
+  position: relative;
+  display: inline-block;
+}
+
+.sloganText {
+  position: absolute;
+  top: 15%;
+  left: 25%;
+}
+
+.sloganText h2 {
+  font-size: 3.5vw;
+}
+
+.sloganText h3{
+  font-size: 1.5vw;
+}
+
 .container
 {
   color:#3d3d3d ;
@@ -81,6 +105,7 @@ img.rounded-circle {
 
 .trocaCordoNome {
   font-size: 5vw;
+  transition: color 0.8s;
   
 }
 
@@ -121,7 +146,9 @@ h3{
 }
 .imgem:hover
 {
-  color: #65ACD8;
+ border-color: none;
+-webkit-box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.2);
+
 }
 .card
 {
