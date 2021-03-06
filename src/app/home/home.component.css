@@ -1,6 +1,7 @@
 .jumbotron{
     background-image: url(https://i.imgur.com/ZwgKZxd.png);
     background-repeat: round;
+    border-radius: 0;
     padding-top: 25px;
     padding-bottom: 25px;
     margin-bottom: 25px;       
@@ -14,7 +15,7 @@
     left: 20%;
 }
 
-.jumbotronText h2{
+.jumbotronText h2 {
     font-size: 3.5vw;   
 }
 
@@ -26,7 +27,7 @@
     font-size: 1.5vw;
 }
 
-.jumbotron:hover .jumbotronText h2{  
+.jumbotron:hover .jumbotronText h2 {  
     color: #f2b035; 
 }
 
@@ -36,43 +37,87 @@
     background: -webkit-gradient(linear, 5 5, 100% 0%, from(white), to(white), color-stop(50%, #F2B035));
 }
 
-.tamanhoCard{
-    width: 250px;
+.carousel-produtos { 
+    margin: 0;
+    padding: 0;
+    width: 70%; 
 }
 
-.botaoCardsPrev{
-    background-color: red;
-    width: 5vh;
-    height: 5vh;
-    top: 50%;
-    position: absolute;
+.control-produtos-prev {
+position: relative;
+left: 35%;    
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23005186' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }
 
-.botaoCardsNext{
-    background-color: red;
-    width: 5vh;
-    height: 5vh;
-    top: 50%;
-    position: absolute;
+.control-produtos-next {
+position: relative;
+right: 40%;
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23005186' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");  
+
 }
 
-.btnVermais{
-    background-color: white;
-    color: black;
-    border: 2px solid #fdfdfd;
-    font-size: 25px;
-    border-radius: 40px;
+.card{
+    width: 15vw;
+    height: 50vh;
 }
 
-.btnVermais:hover{
-    background-color: #005186;
-    color: white;
+.card-img-top {
+    width: 15vw;
+    height: 40vh;
 }
 
+.svg-wrapper {
+height: 60px;
+margin: 0 auto;
+position: relative;
+top: 50%;
+transform: translateY(-50%);
+width: 320px;
+}
+
+.shape {
+fill: transparent;
+stroke-dasharray: 140 540;
+stroke-dashoffset: -474;
+stroke-width: 8px;
+stroke: #005186;
+}
+
+.text {
+color: #3D3D3D;
+font-size: 22px;
+font-weight: bold;
+letter-spacing: 8px;
+line-height: 32px;
+position: relative;
+top: -48px;
+}
+
+@keyframes draw {
+0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+}
+100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+}
+}
+
+.svg-wrapper:hover .shape {
+-webkit-animation: 1s draw linear forwards;
+animation: 0.5s draw linear forwards;
+}
 
 .h2OqueFazemos{
     color: #65ACD8;
     font-family: Century Gothic;
+}
+
+.objetivos {
+    text-align: justify;
 }
 
 .oQueFazemos{

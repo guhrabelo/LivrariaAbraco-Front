@@ -1,7 +1,7 @@
-/* *{
+*{
   padding: 0px;
   margin: 0px;
-} */
+}
 
 p{
   font-size: 18px;
@@ -24,11 +24,11 @@ p{
 }
 
 .sloganText h2 {
-  font-size: 3.5vw;
+  font-size: 3vw;
 }
 
-.sloganText h3{
-  font-size: 1.5vw;
+.sloganText h4{
+  font-size: 2vw;
 }
 
 .container
