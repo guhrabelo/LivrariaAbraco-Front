@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Categoria } from '../model/Categoria';
+import { Produto } from '../model/Produto';
+import { ProdutoService } from '../service/produto.service';
 
 @Component({
   selector: 'app-compra',
@@ -7,9 +11,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompraComponent implements OnInit {
 
-  constructor() { }
+  produto: Produto = new Produto()
+  
+  idProduto: number
 
-  ngOnInit(): void {
+  constructor(
+    private produtoService: ProdutoService,
+    private route: ActivatedRoute
+  ) { }
+
+  ngOnInit() {
+    window.scroll(0,0)
+
+    this.idProduto = this.route.snapshot.params['id']
+    this.findByIdProduto(this.idProduto)
   }
+
+  findByIdProduto(id: number){
+    this.produtoService.getByIdProduto(id).subscribe((resp: Produto)=>{
+      this.produto = resp
+    })
+  }
+
 
 }
