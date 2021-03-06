@@ -12,8 +12,16 @@ import { ProdutoService } from '../service/produto.service';
 export class LojaComponent implements OnInit {
 
   listaProdutos: Produto[]
+  produto: Produto = new Produto()
+  tituloProduto: string
+  generoCategoria: string
+
   categoria: Categoria = new Categoria()
   listaCategoria: Categoria[]
+  listaCategoriaFiltrada: string
+
+  key = 'genero'
+  reverse = false
 
   constructor(
     private produtoService: ProdutoService,
@@ -37,5 +45,16 @@ export class LojaComponent implements OnInit {
       this.listaCategoria = resp
     })
   }
+
+  findByTituloProduto(){
+    if(this.tituloProduto == ''){
+      this.getAllProdutos()
+    }else{
+      this.produtoService.getByTituloProduto(this.tituloProduto).subscribe((resp: Produto[])=>{
+        this.listaProdutos = resp
+      })
+    }
+  }
+
 
 }
