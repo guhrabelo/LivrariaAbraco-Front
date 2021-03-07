@@ -37,7 +37,7 @@
                 <h3 class="mb-1" style="color: #005186">Categorias</h3>
                 <ul class="list-group list-group-flush"
                     *ngFor='let itemCategoria of listaCategoria | orderBy : key : reverse'>
-                    <a  [routerLink]="[itemCategoria.genero]"
+                    <a routerLink='/loja/{{itemCategoria.genero}}'  (click)='findByGeneroCategoria()'
                         class="list-group-item list-group-item-action">{{itemCategoria.genero}}</a>
                 </ul>
             </div>

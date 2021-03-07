@@ -14,11 +14,11 @@ export class LojaComponent implements OnInit {
   listaProdutos: Produto[]
   produto: Produto = new Produto()
   tituloProduto: string
-  generoCategoria: string
+  generoCategoria: Categoria[]
+  listaGenero: string
 
   categoria: Categoria = new Categoria()
   listaCategoria: Categoria[]
-  listaCategoriaFiltrada: string
 
   key = 'genero'
   reverse = false
@@ -56,5 +56,14 @@ export class LojaComponent implements OnInit {
     }
   }
 
+  findByGeneroCategoria(){
+    if(this.listaGenero == ''){
+      this.findAllCategoria()
+    }else{
+      this.categoriaService.getByGeneroCategoria(this.listaGenero).subscribe((resp: Categoria[])=>{
+        this.generoCategoria = resp
+      })
+    }
+  }
 
 }
