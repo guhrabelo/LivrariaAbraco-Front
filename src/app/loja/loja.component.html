@@ -1,0 +1,55 @@
+<!--Body-->
+<div class="container-fluid mt-5">
+
+    <body>
+        <!--Jumbotron-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sloganImg w-100">
+                        <img src="https://i.imgur.com/pPJOvih.png" alt="" class="w-100" />
+                        <div class="sloganText col-6 d-block">
+                            <div class="container">
+                                <h2>Um carinho para o saber</h2>
+                                <h4>Quando abraçamos o conhecimento, todos nós ganhamos. </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/Jumbotron-->
+
+        <!--Produtos-->
+        <div class="row d-flex justify-content-center">
+            <div class="col-2 ml-2 mt-5">
+                <h3 class="mb-1" style="color: #005186">Categorias</h3>
+                <ul class="list-group list-group-flush" *ngFor='let itemCategoria of listaCategoria'>
+                    <a href="#" class="list-group-item list-group-item-action">{{itemCategoria.genero}}</a>
+                </ul>
+            </div>
+
+            <div class="col-9 ml-5 mt-5">
+                <div class="card cardProdutos text-center" *ngFor='let item of listaProdutos'>
+                    <div class="card-body">
+                        <a [routerLink]="['/compra',item.id]"><img src="{{item.imagem}}" alt="" class="imgLivro mt-4" /></a>
+                        <h5 class="card-title mt-2 text-left ml-2">{{item.nome}}</h5>
+                        <h6 class="card-title mt-2 text-left ml-2">{{item.autor}}</h6>
+                        <p class="card-text text-left ml-2">R$ {{item.preco}}</p>
+                    </div>
+                    <div class="card-footer mt-2">
+                        <a [routerLink]="['/compra',item.id]" class="button mb-5">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--/Produtos-->
+
+    </body>
+
+</div>
+<!--/Body-->
+
+
+  
