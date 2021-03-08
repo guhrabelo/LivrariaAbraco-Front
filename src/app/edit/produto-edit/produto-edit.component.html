@@ -24,8 +24,8 @@
                 <input type="text" class="form-control" id="imagem" [(ngModel)]='produto.imagem'>
 
                 <label for="genero">Assunto</label>
-                <select class="form-control mb-2" name="categoria" id="dropCategorias" placeholder="Selecione o Assunto" [(ngModel)]='idCategoria'
-                    (change)='findByIdCategoria()'>
+                <select class="form-control mb-2" name="categoria" id="dropCategorias" placeholder="Selecione o Assunto"
+                    [(ngModel)]='idCategoria' (change)='findByIdCategoria()'>
                     <option *ngFor='let item of listaCategorias' value="{{item.id}}">
                         {{item.assunto}}
                     </option>

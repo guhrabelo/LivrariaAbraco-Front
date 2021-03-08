@@ -12,28 +12,34 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { LojaComponent } from './loja/loja.component';
 import { ProdutoComponent } from './produto/produto.component';
+import { RodapeComponent } from './rodape/rodape.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+
 
 const routes: Routes = [
 
   {path: '', redirectTo: 'home', pathMatch: 'full'},
 
   {path: 'home', component: HomeComponent},
+  {path: 'loja', component: LojaComponent},
   {path: 'sobre-nos', component: SobreNosComponent},
   {path: 'contato', component: ContatoComponent},
-  {path: 'loja', component: LojaComponent},
   
-  {path: 'cadastro', component: CadastroComponent},
   {path: 'login', component: LoginComponent},
-
-  {path: 'categoria', component: CategoriaComponent},
+  {path: 'cadastro', component: CadastroComponent},
+  
   {path: 'produto', component: ProdutoComponent},
-  {path: 'categoria-edit/:id', component: CategoriaEditComponent},
-  {path: 'categoria-delete/:id', component: CategoriaDeleteComponent},
   {path: 'produto-edit/:id', component: ProdutoEditComponent},
   {path: 'produto-delete/:id', component: ProdutoDeleteComponent},
+
+  {path: 'categoria', component: CategoriaComponent},
+  {path: 'categoria-edit/:id', component: CategoriaEditComponent},
+  {path: 'categoria-delete/:id', component: CategoriaDeleteComponent},
+  
   {path: 'compra', component: CompraComponent},
-  {path: 'compra/:id', component: CompraComponent}
+  {path: 'compra/:id', component: CompraComponent},
+
+  {path: 'rodape', component: RodapeComponent}
 
 ];
 
