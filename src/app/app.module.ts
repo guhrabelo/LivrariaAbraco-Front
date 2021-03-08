@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { OrderModule } from 'ngx-order-pipe';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -23,7 +22,6 @@ import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-de
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 import { CompraComponent } from './compra/compra.component';
-
 
 
 @NgModule({
@@ -60,8 +58,7 @@ import { CompraComponent } from './compra/compra.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    OrderModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
