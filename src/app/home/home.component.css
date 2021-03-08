@@ -120,9 +120,9 @@ animation: 0.5s draw linear forwards;
     text-align: justify;
 }
 
-.oQueFazemos{
+.titulos{
     color: #005186;
-    font-family: Century Gothic;
+    font: bold;
 }
 
 .texto-esquerda{
@@ -136,12 +136,5 @@ animation: 0.5s draw linear forwards;
 
 .texto-direita{
     text-align: justify;
-}
-
-.imagemParceiros{
-    background-image: url(https://i.imgur.com/cFyuOd5.jpg);
-    background-position: 90%;
-    background-repeat: no-repeat;
-    background-size: 50%;
 }
 
