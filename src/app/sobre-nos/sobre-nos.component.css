@@ -2,6 +2,15 @@
   padding: 0px;
   margin: 0px;
 }
+
+.ImagemSobrenos{
+  width: 32vw;
+  height: auto;
+  align-items: center;
+  display: flex;
+  margin-top: 30px;
+}
+
 #alinhaNomeio {
   
  
