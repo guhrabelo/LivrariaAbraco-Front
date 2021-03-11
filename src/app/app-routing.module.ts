@@ -11,6 +11,7 @@ import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.com
 import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { LojaCategoriaComponent } from './loja-categoria/loja-categoria.component';
 import { LojaComponent } from './loja/loja.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'sobre-nos', component: SobreNosComponent},
   {path: 'contato', component: ContatoComponent},
   {path: 'loja', component: LojaComponent},
+  {path: 'loja-categoria/:genero', component: LojaCategoriaComponent},
   
   {path: 'cadastro', component: CadastroComponent},
   {path: 'adm', component: AdmComponent},

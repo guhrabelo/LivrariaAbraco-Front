@@ -24,6 +24,7 @@ import { ProdutoEditComponent } from './edit/produto-edit/produto-edit.component
 import { ProdutoDeleteComponent } from './delete/produto-delete/produto-delete.component';
 import { CompraComponent } from './compra/compra.component';
 import { AdmComponent } from './adm/adm.component';
+import { LojaCategoriaComponent } from './loja-categoria/loja-categoria.component';
 
 
 
@@ -57,7 +58,9 @@ import { AdmComponent } from './adm/adm.component';
 
     CompraComponent,
 
-    AdmComponent
+    AdmComponent,
+
+    LojaCategoriaComponent
   ],
   imports: [
     BrowserModule,
