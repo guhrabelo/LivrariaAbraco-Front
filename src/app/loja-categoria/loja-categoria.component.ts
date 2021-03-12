@@ -13,11 +13,11 @@ import { ProdutoService } from '../service/produto.service';
 export class LojaCategoriaComponent implements OnInit {
 
   listaProdutos: Produto[]
+  listaProdutosFiltrada: Produto[]
   produto: Produto = new Produto()
-  tituloProduto: string
+  tituloProdutoCategoria: string
   generoProduto: string
 
-  categoria: Categoria = new Categoria()
   listaCategoria: Categoria[]
   listaCategoriaFiltrada: Produto[]
 
@@ -31,24 +31,25 @@ export class LojaCategoriaComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
     this.findAllCategoria()
+    this.getAllProdutos()
 
-    
+
     this.generoProduto = this.route.snapshot.params['genero']
     this.findByGeneroProduto(this.generoProduto)
-   
+
   }
 
-  findByGeneroProduto(cat: string){
-    this.produtoService.getByGeneroProduto(cat).subscribe((resp: Produto[])=>{
+  findByGeneroProduto(cat: string) {
+    this.produtoService.getByGeneroProduto(cat).subscribe((resp: Produto[]) => {
       this.listaCategoriaFiltrada = resp
     })
   }
 
 
-  findAllCategoria(){
-    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[])=>{
+  findAllCategoria() {
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaCategoria = resp
     })
   }
@@ -59,13 +60,14 @@ export class LojaCategoriaComponent implements OnInit {
     })
   }
 
-  findByTituloProduto(){
-    if(this.tituloProduto == ''){
-      this.getAllProdutos()
-    }else{
-      this.produtoService.getByTituloProduto(this.tituloProduto).subscribe((resp: Produto[])=>{
-        this.listaProdutos = resp
-      })
+  findByTituloProdutoCategoria() {
+    if (this.tituloProdutoCategoria == '') {
+      this.findByGeneroProduto(this.generoProduto)
+    } else {
+      //filter pesquisa em this.tituloProdutoCategoria conforme o que é escrito. gerando um array novo atribuindo tudo ao atributo da esquerda da função
+      this.listaCategoriaFiltrada = this.listaCategoriaFiltrada.filter(produtoGenero => 
+        produtoGenero.nome.toLowerCase().indexOf(this.tituloProdutoCategoria.toLowerCase()) !== -1)
     }
   }
+
 }
