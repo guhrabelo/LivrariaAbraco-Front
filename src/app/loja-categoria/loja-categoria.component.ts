@@ -65,8 +65,8 @@ export class LojaCategoriaComponent implements OnInit {
       this.findByGeneroProduto(this.generoProduto)
     } else {
       //filter pesquisa em this.tituloProdutoCategoria conforme o que é escrito. gerando um array novo atribuindo tudo ao atributo da esquerda da função
-      this.listaCategoriaFiltrada = this.listaCategoriaFiltrada.filter(produtoGenero => 
-        produtoGenero.nome.toLowerCase().indexOf(this.tituloProdutoCategoria.toLowerCase()) !== -1)
+      this.listaCategoriaFiltrada = this.listaCategoriaFiltrada.filter(produtoGenero =>
+        produtoGenero.nome.toLowerCase().indexOf(this.tituloProdutoCategoria.toLowerCase()) != -1)
     }
   }
 

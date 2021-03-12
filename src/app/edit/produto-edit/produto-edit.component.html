@@ -23,14 +23,22 @@
                 <label for="imagem">Imagem</label>
                 <input type="text" class="form-control" id="imagem" [(ngModel)]='produto.imagem'>
 
-                <label for="genero">Assunto</label>
-                <select class="form-control mb-2" name="categoria" id="dropCategorias" placeholder="Selecione o Assunto" [(ngModel)]='idCategoria'
-                    (change)='findByIdCategoria()'>
+                <fieldset disabled="disabled mb-2">
+                    <label for="disabledTextInput">Assunto Anterior  </label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="{{produto.categoria.assunto}}">
+
+                    <label for="disabledTextInput">Gênero Anterior  </label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="{{produto.categoria.genero}}">
+                </fieldset>
+
+                <label for="genero">Novo Assunto</label>
+                <select class="form-control mb-2" name="categoria" id="dropCategorias" placeholder="Selecione o Assunto"
+                    [(ngModel)]='idCategoria' (change)='findByIdCategoria()'>
                     <option *ngFor='let item of listaCategorias' value="{{item.id}}">
                         {{item.assunto}}
                     </option>
                 </select>
-
+                
             </div>
             <div class="d-flex justify-content-center">
                 <button class="btn btn-danger mr-4" routerLink='/produto'>Cancelar</button>
