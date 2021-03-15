@@ -1,34 +1,19 @@
+footer {
+    display: none;
+}
+
 .jumbotron{
-    background-image: url(https://i.imgur.com/ZwgKZxd.png);
+    background-image: url(https://i.imgur.com/hxa9TMz.png);
     background-repeat: round;
     border-radius: 0;
     padding-top: 25px;
     padding-bottom: 25px;
-    margin-bottom: 25px;       
-}
-
-.jumbotronText {
-    position: absolute;
-    color: #3D3D3D;
-    text-align: justify;
-    top: 5%;
-    left: 20%;
-}
-
-.jumbotronText h2 {
-    font-size: 3.5vw;   
+    margin-bottom: 25px;
+           
 }
 
  .jumbotron:hover {
-    background-image: url(https://i.imgur.com/kdzMWnv.png);       
-}
-
-.jumbotronText h3  {
-    font-size: 1.5vw;
-}
-
-.jumbotron:hover .jumbotronText h2 {  
-    color: #f2b035; 
+    background-image: url(https://i.imgur.com/5wwZPhe.png);       
 }
 
 .hrDegrade{
@@ -57,13 +42,13 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.
 }
 
 .card{
-    width: 15vw;
-    height: 50vh;
+    width: 250px;
+    height: 450px;
 }
 
 .card-img-top {
-    width: 15vw;
-    height: 40vh;
+    width: 250px;
+    height: 350px;
 }
 
 .svg-wrapper {

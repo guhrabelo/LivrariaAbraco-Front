@@ -6,4 +6,8 @@
 
 <router-outlet></router-outlet>
 
-<app-rodape></app-rodape>
+<app-rodape *ngIf = homeRoute()></app-rodape>
+
+<app-rodape *ngIf = lojaRoute()></app-rodape>
+
+<app-rodape *ngIf = sobreNosRoute()></app-rodape>
