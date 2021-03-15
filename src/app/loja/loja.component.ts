@@ -13,12 +13,9 @@ import { ProdutoService } from '../service/produto.service';
 export class LojaComponent implements OnInit {
 
   listaProdutos: Produto[]
-  produto: Produto = new Produto()
   tituloProduto: string
   generoCategoria: Categoria[]
-  
 
-  categoria: Categoria = new Categoria()
   listaCategoria: Categoria[]
 
   key = 'genero'
@@ -30,7 +27,7 @@ export class LojaComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
     this.getAllProdutos()
     this.findAllCategoria()
 
@@ -43,17 +40,17 @@ export class LojaComponent implements OnInit {
     })
   }
 
-  findAllCategoria(){
-    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[])=>{
+  findAllCategoria() {
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaCategoria = resp
     })
   }
 
-  findByTituloProduto(){
-    if(this.tituloProduto == ''){
+  findByTituloProduto() {
+    if (this.tituloProduto == '') {
       this.getAllProdutos()
-    }else{
-      this.produtoService.getByTituloProduto(this.tituloProduto).subscribe((resp: Produto[])=>{
+    } else {
+      this.produtoService.getByTituloProduto(this.tituloProduto).subscribe((resp: Produto[]) => {
         this.listaProdutos = resp
       })
     }

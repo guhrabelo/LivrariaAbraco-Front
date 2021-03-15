@@ -96,6 +96,8 @@ top: -48px;
 animation: 0.5s draw linear forwards;
 }
 
+
+
 .h2OqueFazemos{
     color: #65ACD8;
     font-family: Century Gothic;
@@ -122,4 +124,3 @@ animation: 0.5s draw linear forwards;
 .texto-direita{
     text-align: justify;
 }
-
