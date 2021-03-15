@@ -27,6 +27,8 @@ import { CompraComponent } from './compra/compra.component';
 import { AdmComponent } from './adm/adm.component';
 import { LojaCategoriaComponent } from './loja-categoria/loja-categoria.component';
 import { AlertasComponent } from './alertas/alertas.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { PagamentoComponent } from './pagamento/pagamento.component';
 
 
 
@@ -53,7 +55,9 @@ import { AlertasComponent } from './alertas/alertas.component';
     CompraComponent,
     AdmComponent,
     LojaCategoriaComponent,
-    AlertasComponent
+    AlertasComponent,
+    CarrinhoComponent,
+    PagamentoComponent
   ],
   imports: [
     BrowserModule,

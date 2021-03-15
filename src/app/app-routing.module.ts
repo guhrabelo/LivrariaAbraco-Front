@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdmComponent } from './adm/adm.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { CompraComponent } from './compra/compra.component';
 import { ContatoComponent } from './contato/contato.component';
@@ -13,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { LojaCategoriaComponent } from './loja-categoria/loja-categoria.component';
 import { LojaComponent } from './loja/loja.component';
+import { PagamentoComponent } from './pagamento/pagamento.component';
 import { ProdutoComponent } from './produto/produto.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
@@ -37,7 +39,9 @@ const routes: Routes = [
   {path: 'produto-edit/:id', component: ProdutoEditComponent},
   {path: 'produto-delete/:id', component: ProdutoDeleteComponent},
   {path: 'compra', component: CompraComponent},
-  {path: 'compra/:id', component: CompraComponent}
+  {path: 'compra/:id', component: CompraComponent},
+  {path: 'pagamento', component: PagamentoComponent},
+  {path: 'carrinho', component: CarrinhoComponent}
 
 ];
 
