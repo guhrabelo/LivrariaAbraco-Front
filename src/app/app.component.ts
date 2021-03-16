@@ -24,6 +24,10 @@ export class AppComponent {
   sobreNosRoute() {
     return this.router.url == '/sobre-nos';
   }
+
+  pagamentoRoute() {
+    return this.router.url == '/pagamento';
+  }
 }
 
 
