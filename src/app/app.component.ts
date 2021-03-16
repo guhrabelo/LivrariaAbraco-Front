@@ -11,7 +11,7 @@ export class AppComponent {
   constructor(
     public auth: AuthService,
     private router: Router
-  ){}
+  ) { }
 
   homeRoute() {
     return this.router.url == '/home';
@@ -26,5 +26,5 @@ export class AppComponent {
   }
 }
 
-  
+
 

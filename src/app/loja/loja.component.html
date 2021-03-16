@@ -34,14 +34,14 @@
 
         <!--Produtos-->
         <div class="row d-flex justify-content-center">
-            <div class="col-2 ml-2 mt-5" >
+            <div class="col-2 ml-2 mt-5">
                 <h3 class="mb-1" style="color: #005186">Categorias</h3>
                 <ul class="list-group list-group-flush">
                     <a routerLink='/loja' class="list-group-item list-group-item-action">Todas as Categorias</a>
                 </ul>
                 <ul class="list-group list-group-flush"
                     *ngFor='let itemCategoria of listaCategoria | orderBy : key : reverse'>
-                    <a [routerLink]="['/loja-categoria',itemCategoria.genero]" 
+                    <a [routerLink]="['/loja-categoria',itemCategoria.genero]"
                         class="list-group-item list-group-item-action">{{itemCategoria.genero}}</a>
                 </ul>
             </div>
@@ -56,7 +56,7 @@
                         <p class="card-text text-left ml-2">R$ {{item.preco}}</p>
                     </div>
                     <div class="card-footer mt-2">
-                        <a [routerLink]="['/compra',item.id]" class="button mb-5">Comprar</a>
+                        <a [routerLink]="['/compra',item.id]" class="button mb-5 ">Comprar</a>
                     </div>
                 </div>
             </div>
