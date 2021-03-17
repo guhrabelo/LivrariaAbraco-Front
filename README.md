@@ -1,8 +1,8 @@
 # Livraria Abraço
 
-Este repositório contém a documentação de como foi elaborado o site do e-commerce da Livraria Abraço. Na branch -main contém está integrado todas as implementações desenvolvidas ao longo de dois meses.
+Este repositório contém a descrição documentada do e-commerce da Livraria Abraço. Na branch -main está integrado todas as implementações desenvolvidas ao longo de dois meses.
 
-Durante o projeto criou-se back-end, front-end e o banco de dados, em Angular. Cada pasta tem uma configuração específica para a montagem de cada uma das páginas. Para mais detalhes de acesso, segue-se:
+Durante o projeto criou-se back-end, front-end e o banco de dados,  sendo gerado com Angular CLI na versão 11.2.0. Cada pasta tem uma configuração específica para a montagem de cada uma das páginas. Para mais detalhes de acesso do Angular, segue-se:
 
 O projeto foi gerado com Angular CLI na versão 11.2.0.
 
