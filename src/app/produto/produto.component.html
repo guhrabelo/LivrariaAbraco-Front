@@ -21,10 +21,10 @@
                         <input [(ngModel)]='produto.imagem' type="text" class="form-control mb-2" id="imagem"
                             placeholder="Imagem da capa do livro (link)">
                         <select name="select-simples-placeholder" class="form-control mb-2" name="categoria"
-                            id="dropCategorias" placeholder="Selecione o Assunto" [(ngModel)]='idCategoria'
+                            id="dropCategorias" placeholder="Selecione o Gênero" [(ngModel)]='idCategoria'
                             (change)='findByIdCategoria()'>
                             <option *ngFor='let item of listaCategorias' value="{{item.id}}">
-                                {{item.assunto}}
+                                {{item.genero}}
                             </option>
                         </select>
                     </div>
@@ -69,8 +69,8 @@
                         <th>{{item.id}}</th>
                         <td>{{item.nome}}</td>
                         <td>{{item.autor}}</td>
-                        <td>{{item.preco}}</td>
-                        <td>{{item.quantidade}}</td>
+                        <td>{{item.preco | currency:'BRL'}}</td>
+                        <td class="text-center">{{item.quantidade}}</td>
                         <td>{{item.categoria.genero}}</td>
                         <td>{{item.categoria.assunto}}</td>
                         <td class="d-flex justify-content-end">

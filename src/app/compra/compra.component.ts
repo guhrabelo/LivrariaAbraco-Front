@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { AlertasService } from '../service/alertas.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
@@ -17,7 +18,8 @@ export class CompraComponent implements OnInit {
 
   constructor(
     private produtoService: ProdutoService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -31,6 +33,10 @@ export class CompraComponent implements OnInit {
     this.produtoService.getByIdProduto(id).subscribe((resp: Produto)=>{
       this.produto = resp
     })
+  }
+
+  compraProduto() {
+    this.alertas.showAlertInfo('Produto adicionado ao carrinho.')
   }
 
 

@@ -1,9 +1,8 @@
-<!--Body-->
 <div class="container-fluid mt-5">
 
     <body>
-        <!--Jumbotron-->
-        <div class="container-fluid">
+         <!--Jumbotron-->
+         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="sloganImg w-100">
@@ -14,17 +13,17 @@
         </div>
         <!--/Jumbotron-->
 
-
         <!--Campo de Pesquisa-->
         <div class="row d-flex justify-content-center mt-5 mb-5">
             <div class="col-md-4">
                 <div class="form-group">
                     <input type="text" class="form-control" id="titulo" placeholder="Digite o título para pesquisar"
-                        [(ngModel)]='tituloProduto' (keyup)='findByTituloProduto()'>
+                        [(ngModel)]='tituloProdutoCategoria' (keyup)=' findByTituloProdutoCategoria()'>
                 </div>
             </div>
         </div>
         <!--/Campo de Pesquisa-->
+
 
         <!--Produtos-->
         <div class="row d-flex justify-content-center">
@@ -36,21 +35,22 @@
                 <ul class="list-group list-group-flush"
                     *ngFor='let itemCategoria of listaCategoria | orderBy : key : reverse'>
                     <a [routerLink]="['/loja-categoria',itemCategoria.genero]"
+                        (click)='findByGeneroProduto(itemCategoria.genero)'
                         class="list-group-item list-group-item-action">{{itemCategoria.genero}}</a>
                 </ul>
             </div>
 
             <div class="col-10 mt-5">
-                <div class="card cardProdutos text-center" *ngFor='let item of listaProdutos'>
+                <div class="card cardProdutos text-center" *ngFor='let item of listaCategoriaFiltrada'>
                     <div class="card-body">
                         <a [routerLink]="['/compra',item.id]"><img src="{{item.imagem}}" alt=""
                                 class="imgLivro mt-4" /></a>
-                        <h5 class="card-title mt-2 text-left ml-2">{{item.nome}}</h5>
-                        <h6 class="card-title mt-2 text-left ml-2">{{item.autor}}</h6>
-                        <p class="card-text text-left ml-2">{{item.preco | currency:'BRL'}}</p>
+                        <h5 class="card-title mt-2 text-left ml-2"> {{item.nome}} </h5>
+                        <h6 class="card-title mt-2 text-left ml-2"> {{item.autor}} </h6>
+                        <p class="card-text text-left ml-2">{{item.preco | currency:'BRL'}} </p>
                     </div>
                     <div class="card-footer mt-2">
-                        <a [routerLink]="['/compra',item.id]" class="button mb-5 ">Comprar</a>
+                        <a [routerLink]="['/compra', item.id ]" class="button mb-5">Comprar</a>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,11 @@
 
         <!--/Produtos-->
 
+
+
+
+
     </body>
 
+
 </div>
-<!--/Body-->

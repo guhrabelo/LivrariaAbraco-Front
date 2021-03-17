@@ -13,13 +13,9 @@ import { ProdutoService } from '../service/produto.service';
 export class LojaComponent implements OnInit {
 
   listaProdutos: Produto[]
-  produto: Produto = new Produto()
   tituloProduto: string
   generoCategoria: Categoria[]
-  listaGenero: string
-  
 
-  categoria: Categoria = new Categoria()
   listaCategoria: Categoria[]
 
   key = 'genero'
@@ -28,15 +24,14 @@ export class LojaComponent implements OnInit {
   constructor(
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
-    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
     this.getAllProdutos()
     this.findAllCategoria()
 
-    this.listaGenero = this.route.snapshot.params['genero']
+
   }
 
   getAllProdutos() {
@@ -45,29 +40,18 @@ export class LojaComponent implements OnInit {
     })
   }
 
-  findAllCategoria(){
-    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[])=>{
+  findAllCategoria() {
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaCategoria = resp
     })
   }
 
-  findByTituloProduto(){
-    if(this.tituloProduto == ''){
+  findByTituloProduto() {
+    if (this.tituloProduto == '') {
       this.getAllProdutos()
-    }else{
-      this.produtoService.getByTituloProduto(this.tituloProduto).subscribe((resp: Produto[])=>{
+    } else {
+      this.produtoService.getByTituloProduto(this.tituloProduto).subscribe((resp: Produto[]) => {
         this.listaProdutos = resp
-      })
-    }
-  }
-
-
-  findByGeneroCategoria(){
-    if(this.listaGenero == ''){
-      this.findAllCategoria()
-    }else{
-      this.categoriaService.getByGeneroCategoria(this.listaGenero).subscribe((resp: Categoria[])=>{
-        this.generoCategoria = resp
       })
     }
   }

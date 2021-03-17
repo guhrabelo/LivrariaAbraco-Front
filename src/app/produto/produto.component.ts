@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -22,7 +23,8 @@ export class ProdutoComponent implements OnInit {
   constructor(
     private router: Router,
     private produtoService: ProdutoService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -62,14 +64,16 @@ export class ProdutoComponent implements OnInit {
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
       this.produto.preco = Number(this.produto.preco.toFixed(2).replace(".",",")) 
-      alert('Produto cadastrado com sucesso!')
+      this.alertas.showAlertSuccess('Produto cadastrado com sucesso!')
       this.produto = new Produto()
       this.getAllProdutos()
     }, erro =>{
       if(erro.status == 500){
-        alert('Preencha os campos corretamente!')
+        this.alertas.showAlertInfo('Preencha os campos corretamente!')
       }
     }) 
   }
+
+
 
 }
