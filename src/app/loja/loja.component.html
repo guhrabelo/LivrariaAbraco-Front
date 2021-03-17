@@ -47,7 +47,7 @@
                                 class="imgLivro mt-4" /></a>
                         <h5 class="card-title mt-2 text-left ml-2">{{item.nome}}</h5>
                         <h6 class="card-title mt-2 text-left ml-2">{{item.autor}}</h6>
-                        <p class="card-text text-left ml-2">R$ {{item.preco}}</p>
+                        <p class="card-text text-left ml-2">{{item.preco | currency:'BRL'}}</p>
                     </div>
                     <div class="card-footer mt-2">
                         <a [routerLink]="['/compra',item.id]" class="button mb-5 ">Comprar</a>

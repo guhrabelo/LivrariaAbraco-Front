@@ -36,3 +36,11 @@
     align-items: center;
     
 }
+
+.icones {
+    fill: white;
+}
+
+.icones:hover {
+    fill: #65ACD8;;
+}

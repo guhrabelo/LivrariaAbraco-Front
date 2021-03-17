@@ -13,22 +13,7 @@ export class AppComponent {
     private router: Router
   ) { }
 
-  homeRoute() {
-    return this.router.url == '/home';
-  }
 
-  lojaRoute() {
-    return this.router.url == '/loja';
-  }
 
-  sobreNosRoute() {
-    return this.router.url == '/sobre-nos';
-  }
 
-  pagamentoRoute() {
-    return this.router.url == '/pagamento';
-  }
 }
-
-
-

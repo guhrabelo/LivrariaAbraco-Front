@@ -69,8 +69,8 @@
                         <th>{{item.id}}</th>
                         <td>{{item.nome}}</td>
                         <td>{{item.autor}}</td>
-                        <td>{{item.preco}}</td>
-                        <td>{{item.quantidade}}</td>
+                        <td>{{item.preco | currency:'BRL'}}</td>
+                        <td class="text-center">{{item.quantidade}}</td>
                         <td>{{item.categoria.genero}}</td>
                         <td>{{item.categoria.assunto}}</td>
                         <td class="d-flex justify-content-end">

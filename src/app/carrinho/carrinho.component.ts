@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-carrinho',
@@ -7,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarrinhoComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
-  ngOnInit(){
-    
+  ngOnInit() {
+
+    if (environment.tipo == '') {
+      this.router.navigate(['/home'])
+    }
   }
 
 }
