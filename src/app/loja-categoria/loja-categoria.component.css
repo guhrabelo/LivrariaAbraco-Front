@@ -2,26 +2,7 @@
     padding: 0px;
     margin: 0px;
  }
- 
- .sloganImg {
-     position: relative;
-     display: inline-block;
- }
- 
- .sloganText {
-     position: absolute;
-     top: 15%;
-     left: 25%;
- }
- 
- .sloganText h2 {
-     font-size: 3vw;
- }
- 
- .sloganText h4{
-     font-size: 2vw;
- }
- 
+  
  .list-group-item {
    color:#5897BE;
    font-size: 20px;
@@ -30,7 +11,7 @@
  
  .list-group-item:hover {
    color: #005186;
-   font-size: 25px
+   font-size: 22px
  }
  
    a.button{
@@ -79,7 +60,7 @@
    }
  
    .cardProdutos {
-     width: 300px;
+     width: 330px;
      height: 575px;
  
    }

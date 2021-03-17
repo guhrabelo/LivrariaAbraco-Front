@@ -28,7 +28,7 @@
 
         <!--Produtos-->
         <div class="row d-flex justify-content-center">
-            <div class="col-2 ml-2 mt-5">
+            <div class="col ml-5 mt-5">
                 <h3 class="mb-1" style="color: #005186">Categorias</h3>
                 <ul class="list-group list-group-flush">
                     <a routerLink='/loja' class="list-group-item list-group-item-action">Todas as Categorias</a>
@@ -40,7 +40,7 @@
                 </ul>
             </div>
 
-            <div class="col-9 ml-5 mt-5">
+            <div class="col-10 mt-5">
                 <div class="card cardProdutos text-center" *ngFor='let item of listaProdutos'>
                     <div class="card-body">
                         <a [routerLink]="['/compra',item.id]"><img src="{{item.imagem}}" alt=""

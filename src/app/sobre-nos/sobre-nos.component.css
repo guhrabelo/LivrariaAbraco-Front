@@ -44,29 +44,6 @@ p{
   font-size: 18px;
 }
 
-.jumbotron{
-  display: flex;
-
-}
-
-.sloganImg {
-  position: relative;
-  display: inline-block;
-}
-
-.sloganText {
-  position: absolute;
-  top: 15%;
-  left: 25%;
-}
-
-.sloganText h2 {
-  font-size: 3vw;
-}
-
-.sloganText h4{
-  font-size: 2vw;
-}
 
 .container
 {
